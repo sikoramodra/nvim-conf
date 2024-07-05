@@ -19,4 +19,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end,
 })
 
+vim.api.nvim_create_autocmd("Filetype", {
+  pattern = "qml",
+  callback = function()
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 4
+  end,
+})
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
