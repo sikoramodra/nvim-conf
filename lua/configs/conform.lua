@@ -2,7 +2,9 @@ local options = {
   formatters = {
     qmlformat = {
       command = "qmlformat",
-      args = { "$FILENAME" },
+      args = { "-i", "$FILENAME" },
+      stdin = false,
+      tmpfile_format = ".conform.$RANDOM.$FILENAME",
     },
   },
 

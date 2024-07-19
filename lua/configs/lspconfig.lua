@@ -19,13 +19,15 @@ local configs = require "lspconfig.configs"
 if not configs.qmlls6 then
   configs.qmlls6 = {
     default_config = {
-      on_attach = on_attach,
-      on_init = on_init,
-      capabilities = capabilities,
       cmd = { "qmlls6" },
       filetypes = { "qml" },
       root_dir = lspconfig.util.root_pattern ".git",
     },
   }
 end
-lspconfig.qmlls6.setup {}
+
+lspconfig.qmlls6.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+}
