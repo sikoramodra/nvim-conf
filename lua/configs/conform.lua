@@ -13,7 +13,8 @@ local options = {
     -- css = { "prettier" },
     -- html = { "prettier" },
     cpp = { "clang-format" },
-    cmake = { "cmake_format" },
+    -- cmake = { "cmake_format" },
+    cmake = { "gersemi" },
     qml = { "qmlformat" },
   },
 
