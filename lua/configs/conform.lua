@@ -10,12 +10,15 @@ local options = {
 
   formatters_by_ft = {
     lua = { "stylua" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
+    css = { "prettier" },
+    html = { "prettier" },
     cpp = { "clang-format" },
     -- cmake = { "cmake_format" },
     cmake = { "gersemi" },
     qml = { "qmlformat" },
+    bash = { "shfmt", "beautysh" },
+    javascript = { "prettier" },
+    typescript = { "prettier" },
   },
 
   format_on_save = {

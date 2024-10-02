@@ -5,8 +5,8 @@
 local M = {}
 
 M.ui = {
-  theme = "onedark",
   transparency = true,
+  theme = "onedark",
 
   cmp = {
     style = "atom",
