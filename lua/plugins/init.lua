@@ -2,9 +2,7 @@ return {
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
-    config = function()
-      require "configs.conform"
-    end,
+    opts = require "configs.conform",
   },
   {
     "hrsh7th/nvim-cmp",
@@ -52,7 +50,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
   },
@@ -80,7 +77,7 @@ return {
         -- "ts-standard",
         "svelte-language-server",
         "tailwindcss-language-server",
-        -- "hyprls",
+        "hyprls",
         "typescript-language-server",
       },
     },
@@ -89,12 +86,10 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "bash",
         "c",
         "cmake",
         "comment",
         "cpp",
-        "fish",
         "gitignore",
         "qmljs",
         "css",
@@ -111,4 +106,24 @@ return {
       },
     },
   },
+  {
+    "windwp/nvim-ts-autotag",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("nvim-ts-autotag").setup {
+        enable = true,
+      }
+    end,
+    lazy = true,
+    event = "VeryLazy",
+  },
+  -- {
+  -- 	"nvim-treesitter/nvim-treesitter",
+  -- 	opts = {
+  -- 		ensure_installed = {
+  -- 			"vim", "lua", "vimdoc",
+  --      "html", "css"
+  -- 		},
+  -- 	},
+  -- },
 }
