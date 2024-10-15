@@ -17,8 +17,11 @@ local options = {
     cmake = { "gersemi" },
     qml = { "qmlformat" },
     bash = { "shfmt", "beautysh" },
+    json = { "prettier" },
     javascript = { "prettier" },
+    javascriptreact = { "prettier" },
     typescript = { "prettier" },
+    typescriptreact = { "prettier" },
   },
 
   format_on_save = {
