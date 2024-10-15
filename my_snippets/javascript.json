@@ -1,15 +1,11 @@
 {
   "destructuring of props": {
     "prefix": "dp",
-    "body": [
-      "const { ${1:name} } = this.props"
-    ]
+    "body": ["const { ${1:name} } = this.props"]
   },
   "destructuring of state": {
     "prefix": "ds",
-    "body": [
-      "const { ${1:name} } = this.state"
-    ]
+    "body": ["const { ${1:name} } = this.state"]
   },
   "if falsy return null": {
     "prefix": "ifr",
@@ -307,11 +303,7 @@
   },
   "useEffect": {
     "prefix": "ue",
-    "body": [
-      "useEffect(() => {",
-      "\t$1",
-      "}, [${3:dependencies}])$0"
-    ],
+    "body": ["useEffect(() => {", "\t$1", "}, [${3:dependencies}])$0"],
     "description": "React useEffect() hook"
   },
   "useEffect with return": {
@@ -328,16 +320,12 @@
   },
   "useContext": {
     "prefix": "uc",
-    "body": [
-      "const $1 = useContext($2)$0"
-    ],
+    "body": ["const $1 = useContext($2)$0"],
     "description": "React useContext() hook"
   },
   "useRef": {
     "prefix": "ur",
-    "body": [
-      "const ${1:elName}El = useRef(null)$0"
-    ],
+    "body": ["const ${1:elName}El = useRef(null)$0"],
     "description": "React useContext() hook"
   },
   "useCallback": {
@@ -361,42 +349,22 @@
   },
   "describeBlock": {
     "prefix": "desc",
-    "body": [
-      "describe('$1', () => {",
-      "  $0",
-      "})",
-      ""
-    ],
+    "body": ["describe('$1', () => {", "  $0", "})", ""],
     "description": "Testing `describe` block"
   },
   "testBlock": {
     "prefix": "test",
-    "body": [
-      "test('should $1', () => {",
-      "  $0",
-      "})",
-      ""
-    ],
+    "body": ["test('should $1', () => {", "  $0", "})", ""],
     "description": "Testing `test` block"
   },
   "itBlock": {
     "prefix": "tit",
-    "body": [
-      "it('should $1', () => {",
-      "  $0",
-      "})",
-      ""
-    ],
+    "body": ["it('should $1', () => {", "  $0", "})", ""],
     "description": "Testing `it` block"
   },
   "itAsyncBlock": {
     "prefix": "tita",
-    "body": [
-      "it('should $1', async () => {",
-      "  $0",
-      "})",
-      ""
-    ],
+    "body": ["it('should $1', async () => {", "  $0", "})", ""],
     "description": "Testing async `it` block"
   }
 }

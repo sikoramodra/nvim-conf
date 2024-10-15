@@ -22,10 +22,12 @@ return {
       -- snippets engine
       {
         "L3MON4D3/LuaSnip",
-        config = function()
-          require("luasnip.loaders.from_vscode").lazy_load {
-            paths = "~/.config/nvim/my_snippets",
-          }
+        dependencies = "rafamadriz/friendly-snippets",
+        build = "make install_jsregexp",
+        opts = { history = true, updateevents = "TextChanged,TextChangedI" },
+        config = function(_, opts)
+          require("luasnip").config.set_config(opts)
+          require "nvchad.configs.luasnip"
         end,
       },
 
