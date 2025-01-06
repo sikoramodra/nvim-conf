@@ -22,6 +22,7 @@ local options = {
     javascriptreact = { "prettier" },
     typescript = { "prettier" },
     typescriptreact = { "prettier" },
+    go = { "gofumpt", "goimports-reviser", "golines" },
   },
 
   format_on_save = {

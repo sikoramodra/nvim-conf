@@ -7,6 +7,13 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
+map(
+  { "n", "i" },
+  "<leader>gsj",
+  "<cmd> GoTagAdd json <cr>",
+  { desc = "Add json struct tags" }
+)
+
 -- close when nvim-tree is last window
 vim.api.nvim_create_autocmd("BufEnter", {
   nested = true,
