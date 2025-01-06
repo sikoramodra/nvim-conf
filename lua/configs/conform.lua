@@ -1,21 +1,21 @@
 local options = {
-  formatters = {
-    qmlformat = {
-      command = "qmlformat",
-      args = { "-i", "$FILENAME" },
-      stdin = false,
-      tmpfile_format = ".conform.$RANDOM.$FILENAME",
-    },
-  },
+  -- formatters = {
+  --   qmlformat = {
+  --     command = "qmlformat",
+  --     args = { "-i", "$FILENAME" },
+  --     stdin = false,
+  --     tmpfile_format = ".conform.$RANDOM.$FILENAME",
+  --   },
+  -- },
 
   formatters_by_ft = {
     lua = { "stylua" },
     css = { "prettier" },
     html = { "prettier" },
-    cpp = { "clang-format" },
+    -- cpp = { "clang-format" },
     -- cmake = { "cmake_format" },
-    cmake = { "gersemi" },
-    qml = { "qmlformat" },
+    -- cmake = { "gersemi" },
+    -- qml = { "qmlformat" },
     bash = { "shfmt", "beautysh" },
     json = { "prettier" },
     javascript = { "prettier" },

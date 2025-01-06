@@ -7,31 +7,31 @@ local lspconfig = require "lspconfig"
 local servers = {
   "html",
   "cssls",
-  "clangd",
-  "cmake",
+  -- "clangd",
+  -- "cmake",
+  -- "qmlls6",
   "bashls",
   "dockerls",
   "docker_compose_language_service",
   "eslint",
-  "hyprls",
   "jsonls",
   "svelte",
   "tailwindcss",
   "ts_ls",
-  "qmlls6",
+  "hyprls",
 }
 local nvlsp = require "nvchad.configs.lspconfig"
 
-local configs = require "lspconfig.configs"
-if not configs.qmlls6 then
-  configs.qmlls6 = {
-    default_config = {
-      cmd = { "qmlls6" },
-      filetypes = { "qml" },
-      root_dir = lspconfig.util.root_pattern ".git",
-    },
-  }
-end
+-- local configs = require "lspconfig.configs"
+-- if not configs.qmlls6 then
+--   configs.qmlls6 = {
+--     default_config = {
+--       cmd = { "qmlls6" },
+--       filetypes = { "qml" },
+--       root_dir = lspconfig.util.root_pattern ".git",
+--     },
+--   }
+-- end
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do

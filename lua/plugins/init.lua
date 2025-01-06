@@ -61,9 +61,9 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "clangd",
-        "clang-format",
-        "cmake-language-server",
+        -- "clangd",
+        -- "clang-format",
+        -- "cmake-language-server",
         "css-lsp",
         "docker-compose-language-service",
         "dockerfile-language-server",
@@ -90,12 +90,12 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "c",
-        "cmake",
+        -- "c",
+        -- "cmake",
         "comment",
-        "cpp",
+        -- "cpp",
         "gitignore",
-        "qmljs",
+        -- "qmljs",
         "css",
         "dockerfile",
         "typescript",
@@ -121,13 +121,4 @@ return {
     lazy = true,
     event = "VeryLazy",
   },
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
 }

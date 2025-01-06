@@ -20,6 +20,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end,
 })
 
+-- temp hack to make react project use 2 spaces
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "javascriptreact", "typescriptreact", "jsx", "tsx" },
   callback = function()
