@@ -5,6 +5,10 @@ return {
     opts = require "configs.conform",
   },
   {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+  {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
